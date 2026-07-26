@@ -1,0 +1,24 @@
+--- arch/arm64/boot/dts/qcom/msm8916-wingtech-wt88047.dts
++++ arch/arm64/boot/dts/qcom/msm8916-wingtech-wt88047.dts
+@@ -139,11 +139,21 @@
+ 	pm8916_l17: l17 {
+ 		regulator-min-microvolt = <2850000>;
+ 		regulator-max-microvolt = <2850000>;
+ 	};
++
++	/*
++	 * L10: Camera AVDD 2.8V (analog)
++	 * Shared by ov8865 (rear) and ov2680 (front)
++	 */
++	pm8916_l10: l10 {
++		regulator-min-microvolt = <2800000>;
++		regulator-max-microvolt = <2800000>;
++	};
+ };
+ 
+ &pm8916_vib {
+ 	status = "okay";
+ };
+ 
++/* eMMC */
+ &sdhc_1 {

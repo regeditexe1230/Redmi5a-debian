@@ -1,0 +1,41 @@
+# 编译产物
+*.o
+*.ko
+*.mod.c
+*.mod.o
+*.o.*
+*.order
+*.symvers
+*.cmd
+.tmp_versions/
+.tmp_vmlinux*
+
+# 内核镜像与中间产物（仅保留最终 boot.img）
+vmlinux
+vmlinux.o
+vmlinux.bin
+System.map
+Module.symvers
+modules.order
+modules.builtin
+modules.builtin.modinfo
+arch/arm64/boot/Image
+arch/arm64/boot/Image.gz
+arch/arm64/boot/dts/qcom/*.dtb
+arch/arm64/boot/dts/qcom/*.dtbo
+
+# 编辑器
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# 压缩包
+*.tar.gz
+*.tar
+*.zip
